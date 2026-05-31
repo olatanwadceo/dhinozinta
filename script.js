@@ -23,6 +23,7 @@ error.style.display = 'none';
 form.querySelectorAll('input').forEach(i => i.style.border = '1px solid #ccc');
 }
 
+document.querySelector('form')
 form.addEventListener('submit', function(e){
 e.preventDefault();
 clearErrors();

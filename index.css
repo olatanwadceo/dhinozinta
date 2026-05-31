@@ -27,10 +27,7 @@
 				border:none;
 				cursor:pointer;
 				order: -1;
-				padding:3px;
-				border:2px solid black;
-				border-radius:5px;
-				
+				padding:3px;		
 			}
 			.nav-bar{
 				position: sticky ;
@@ -241,6 +238,9 @@
 				text-decoration:none;
 				font-size:16px;
 				font-family:Verdana;
+			}
+			.login{
+				font-size:14px;
 			}
 			.nav-right a:hover{
 				background-color:black;
