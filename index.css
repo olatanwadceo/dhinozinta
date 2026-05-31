@@ -1,0 +1,341 @@
+*{
+				box-sizing:border-box;
+				margin:0px;
+				padding:0px;
+				
+			}
+			body{
+				font-size:14px;
+				font-family:arial, sans-serif;
+				line-height:1.5;
+			}
+			p{
+				font-family:Verdana;
+			}
+			.container{
+				padding:0 5px;
+				box-sizing:border-box;
+				margin:0 auto;
+				width:100%;
+				max-width:1200px;
+			}
+			.hamburger{
+				color:black;
+				display:none;
+				font-size:24px;
+				background:none;
+				border:none;
+				cursor:pointer;
+				order: -1;
+				padding:3px;
+				border:2px solid black;
+				border-radius:5px;
+				
+			}
+			.nav-bar{
+				position: sticky ;
+				top:0px;
+				z-index:999;
+				background:rgb(200 200 200);				
+			}
+			.nav-left{
+				display:flex;
+				flex:1;
+				list-style-type:none;
+				gap:24px;
+				padding:5px;
+				
+			}
+			
+			.carouse-box{
+				border:1px solid none;
+				width:100%;
+				max-width:100%;
+				min-height:250px;
+				height:auto;
+				flex:0 0 auto;
+				margin:0 auto;
+				box-sizing:border-box;
+				height:auto;
+				background-color:#fff;
+				background-image:url('images/pixel.jpg');
+				background-size:cover;
+				background-position:center;
+				background-repeat:no-repeat;
+			}
+			 .inner-box{
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				padding:20%;
+				height:100%;	/* inherit*/
+				background-color:rgba(0,0,0,0.5);
+				color:darkorange;
+				font-family:Times New Roman, serif;
+				font-size:16px;
+				}
+			@media(max-width:700px){
+				.btn-appointment{
+					display:none;
+				}
+				.nav-left{
+					display:none;
+				}
+				.hamburger{
+					display:block;
+					
+				}
+				.nav-container{
+					justify-content:space-between;
+					
+				}
+				.nav-logo{
+					position:absolute;
+					left:50%;
+					transform:translateX(-50%);
+				}
+				.nav-right{
+					flex:0;
+				}
+				.nav-left.show-mobile{
+					display:flex;
+					flex-direction:column;
+					position:absolute;
+					top:60px;
+					left:0;
+					width:100%;
+					background:black;
+					padding:20px;
+					gap:15px;
+					border-bottom:1px solid #eee;
+					z-index:100;
+				}
+				.nav-left a{
+					color:white;
+				}
+					.shop{
+					flex-direction:column;
+				}
+				.carouse-box{
+					background-color:#fff;
+					background-size:contain;
+					background-position:center;
+					background-repeat:no-repeat;
+					min-height:100%;
+					height:auto;
+					width:100%;
+				}
+				.inner-box,	h1{
+					font-family:Times New Roman, serif;
+					font-size:12px;
+					width:100%;
+					text-align:center;
+					height:fit-content;
+					min-height:fit-content;
+				}
+			}
+			
+			@media(max-width:480px){
+				.nav-container{
+					padding:0 12px;
+				}
+				.nav-logo a{
+					
+					font-size:14px;
+					letter-spacing:1px;
+					
+				}
+				
+				.btn-appointment{
+					display:none;
+		
+				}
+		
+				.login-btn{
+					margin-right:0;
+				}
+				.nav-right{
+					gap:16px;
+				}
+				.shop{
+					flex-direction:column;
+					
+				}
+				.carouse-box{
+					background-color:#fff;
+					background-size:cover;
+					background-position:center;
+					background-repeat:no-repeat;
+					position:relative;
+					width:100%;
+					height:auto;
+					min-height:100%;
+					box-sizing:border-box;
+				}
+			.inner-box,	h1{
+					
+					font-family:Times New Roman, serif;
+					font-size:12px;
+					width:100%;
+					text-align:center;
+					height:fit-content;
+					min-height:fit-content;
+				}
+			}
+			#headline{
+				background:black;
+				padding:15px;
+			}
+			#headline h4{
+				color:darkorange;
+				text-align:center;
+			}
+			.nav-bar{
+				color:white;
+				padding:15px 0;
+				border-bottom:1px solid #e5e5e5;
+			}
+			.nav-container{
+				display:flex;
+				justify-content:space-between;
+				align-items:center;
+				max-width:1400px;
+				padding:0 16px;
+				margin:0 auto;
+				position:relative;
+				box-sizing:border-box;
+			}
+
+			.nav-right{
+				display:flex;
+				flex:1;
+				align-items:center;
+				gap:0px;
+				justify-content: flex-end;
+			}
+			.nav-logo {
+				flex:0 1 auto;
+				text-align:center;
+	
+			}
+			.nav-logo a{
+				letter-spacing:2px;
+				text-decoration:none;
+				font-size:16px;
+				font-weight:bold;
+				font-family:Times New Roman, serif;
+				padding:14px;
+			}
+			.nav-left a{
+				text-decoration:none;
+				font-size:16px;
+				font-family:Times New Roman, serif;
+			}
+			.nav-left a:hover{
+				background-color:black;
+				color:white;
+				padding:6px;
+				border-radius:5px;
+			}
+			.nav-right a{
+				text-decoration:none;
+				font-size:16px;
+				font-family:Verdana;
+			}
+			.nav-right a:hover{
+				background-color:black;
+				color:white;
+				padding:6px;
+				border-radius:5px;
+			}
+			.btn-appointment{
+				background-color:black;
+				color:darkorange;
+				padding:5px;
+				margin:6px;
+				border-radius:7px;
+				font-weight:400;
+				box-sizing:border-box;
+			}
+			.btn-appointment:hover{
+				background-color:#fff;
+				color:black;
+			}
+			a{
+				color:black;
+			}
+			
+			
+			
+			.shop{
+				max-width:100%;
+				border:1px solid none;
+				display:flex;
+				box-sizing:border-box;
+				justify-content:space-around;
+				align-items:flex-start;
+				background-color:wheat;
+				justify-items:start;
+				
+			}
+			.store{
+				
+				flex:1;
+				word-wrap:wrap;
+				overflow-wrap:anywhere;
+				text-align:center;
+				border:2px solid none;
+				height:fit-content;
+				width:fit-content;
+				box-sizing:border-box;
+				gap:10px;
+				margin:30px;
+				padding:20px;
+				border-radius:10px;
+				min-width:0;
+				line-height:2;
+				
+			}
+			.two{
+				background-color:white;
+				box-shadow:5px 5px 5px black;
+				box-shadow: 0 0 20px rgba(50, 50, 50, 0.9);
+			}
+			.image{
+				box-sizing:border-box;
+				display:flex;
+				justify-content:space-around:
+				align-items:center;
+				border:1px solid none;
+				min-height:250px;
+				background-color:grey;
+				color: white;
+				
+			}
+			.circle{
+				border:1px solid none;
+				padding:16px;
+				width:50%;
+				margin:20px auto;
+				background-color:white;
+				box-sizing:border-box;
+				border-radius:100%;
+				box-shadow:inset 0 0 15px rgba(0, 0, 0, 0.3);
+			}
+			.foot{
+				background-color:black;
+				color:darkorange;
+				
+				height:150px;
+				text-align:center;
+			}
+			.foothead{
+				padding:16px;
+			}
+			.modern{
+				min-height:400px;
+				border:1px solid red;
+				background:white;
+				box-sizing:border-box;
+				
+			}

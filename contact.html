@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+	<html lang ="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Contact Us</title>
+			<link rel="stylesheet" href="index.css"></link>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css/">
+			<style>
+			*{
+				box-sizing:border-box;
+				margin:0px;
+				padding:0px;
+				
+			}
+			body{
+				font-size:14px;
+				font-family:arial, sans-serif;
+				line-height:1.5;
+			}
+			.container{
+				padding:0 5px;
+				box-sizing:border-box;
+				margin:0 auto;
+				width:100%;
+				max-width:1200px;
+			}
+			
+			.box1{
+				border:1px solid none;
+				width:100%;
+				max-width:100%;
+				min-height:400px;
+				height:auto;
+				flex:0 0 auto;
+				margin:0 auto;
+				padding:20px;
+				box-sizing:border-box;
+				height:auto;
+				background-color:#fff;
+				background-image:url('images/pixel.jpg');
+				background-size:cover;
+				background-position:center;
+				background-repeat:no-repeat;
+			}
+			
+			
+				.box1{
+					padding:0 ;
+					background-color:orange;
+					height:400px;
+					min-height:100%;
+				}
+				.inner{
+					padding:40px;
+					width:100%;
+					height:100%;	/* inherit*/
+					background-color:rgba(0,0,0,0.7);
+					display:flex;
+					flex-direction: column;
+					justify-content:center;
+					align-items:center;
+					gap:15px;
+					text-align:center;
+				}
+				.inner h1, .inner p{
+					color:white;
+				}
+				.inner h1{
+					font-size:70px;
+					color:darkorange;
+				}
+				.inner p{
+					font-size:20px;
+					margin-bottom:20px;
+				}
+				#para_one{
+					color:white;
+					font-size:1.25rem;
+					font-family:Times New Roman;
+					font-style:bold;
+					text-align:center;
+				}
+				#head_one{
+					font-family:Palatino Linotype;
+					font-style:Bold Italic;
+					font-size:40px;
+					
+				}
+				button{
+					background-color:rgb(0,0,255);
+					padding: 5px 40px;
+					color:white;
+					border-radius:10px;
+					border:none;
+					font-size:16px;
+					
+				}
+				
+
+				.inner1{
+					display:flex;
+					flex: 1;
+					justify-content:center;
+					margin:0 auto;
+					align-items:center;
+					background-color: darkorange;
+					min-height:100hv;
+					padding:20px 15px;
+					box-sizing:border-box;
+					border-radius:100%;
+					/*animation:spin 2s linear infinite;*/
+					box-shadow:5px 3px 5px 3px white;
+				}
+				/*@keyframes spin{
+					from{transform:rotate(0deg);}
+					to{ transform:rotate(360deg);}
+				}*/
+				.box2{
+					padding:30px;
+					display:flex;
+					justify-content:center;
+					align-items:center;
+					background: black;
+					box-sizing:border-box;
+					
+				}
+			input{
+				padding:2px;
+				margin:10px;
+				box-sizing:border-box;
+				width:250px;
+				width:250px;
+				
+				
+			
+			}
+			#delete_btn:hover{
+				background: #c1121f;
+			}
+			button:hover{
+				background: green;
+				
+			}
+			.btn{
+				display:inline-block;
+				padding:0.375rem 0.75rem;
+				font-size:1rem;
+				font-weight:400;
+				line-height:1.025;
+				border:1px solid wheat;
+				border-radius:3px;
+				transistion:all 0.15s ease-in-out;
+				color:#fff;
+				cursor:pointer;
+				text-decoration:none;
+			}
+			.btn:hover{
+				backgroung-color:#0a58ca;
+				border-color:#0a53be;
+				
+			}
+			.btn:focus{
+				outline:0;
+				box-shadow:0 0.25rem rgba()13, 110, 200,0.25;
+			}
+			.btn:active{
+				outline:0;
+				box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);
+			}
+			
+			
+			#btn, #delete_btn{
+				width:100%;
+				border:none;
+				border-radius:5px;
+				
+			}
+			#delete_btn{
+				background-color:darkred;
+			}
+			#register{
+				background-color:darkorange;
+				margin:20px;
+				padding:10px;
+				
+			}
+			#start{
+				margin:20px;
+				padding:10px;
+			}
+			#sect{
+				border:none;
+				display:flex;
+				gap:15px;
+				background-color:white;
+				max-width:1200px;
+				margin:0 auto;
+				box-sizing:border-box:
+			}
+			.head{
+
+				flex:1;
+				min-width:0;
+				color:white;
+				background:black;
+				padding:20px 15px;
+				text-align:center;
+				box-sizing:border-box;
+				border-radius:8px;
+				box-shadow:7px 5px 5px grey;
+			}
+			.middle_parent{
+				display:flex;
+				gap:15px;
+				background-color:darkorange;
+				max-width:1200px;
+				margin:0 auto;
+				box-sizing:border-box:
+				padding:0 20px 20px 20px;
+				box-shadow:10px 15px 10px grey;
+				box-sizing:border-box;
+			}
+		
+			.middle_children{
+				flex:1;
+				text-align:center;
+				padding:20px 15px;
+				box-sizing:border-box;
+				border-radius:10px;
+				box-shadow:7px 5px 5px black;
+				min-width:0;
+			}
+			#aftersect{
+				border:1px solid red;
+				height:400px;
+				background-color:black;
+			}
+			#signup{
+				width:100%;
+				border-radius: 30px;
+				padding:25px 20px;
+				margin:20px;
+				background: white;
+				max-width:400px;
+			}
+			@media(max-width: 400px){
+				.inner1{
+					padding:10px;
+					align-items:flex-start;
+				}
+				#signup{
+					padding:20px 15px;
+				}
+				#signup h4{
+					font-size:16px;
+				}
+				#signup label{
+					font-size:13px;
+					margin:10px 0 4px 0;
+					
+				}
+				#signup input{
+					padding:5px;
+					font-size:14px;
+					width:100%;
+					
+				}
+			}
+			</style>
+		</head>
+		<body>
+			<div class="container">
+			
+				<div id = "headline">
+					<h4>Custom made for you - 100 days fitting guarantee - Premium European craftsmanship</h4>
+				</div>
+				
+				<nav class="nav-bar">
+					<div class="nav-container">
+						<button class="hamburger"><i class="fa-solid fa-bars"></i> ⇛ </button>
+						<ul class="nav-left">
+							<li><a href="index.html">shop</a></li>	
+							<li><a href="store.html">stores</a></li>	
+							<li><a href="about.html">About</a></li>	
+							<li><a href="#">Books</a></li>	
+							<li><a href="journal.html">style Journal</a></li>	
+							<li><a href="#">wedding Suit</a></li>
+						</ul>
+						
+						<div class="nav-logo">
+							<a href="#">DHINOZINTA</a>
+						</div>
+						
+						<div class="nav-right">
+							<a href="contact.html" class="btn-appointment">Book a free appointment</a>
+							<a href="#" class="login-btn">Login</a>
+							<a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+						</div>
+						
+					</div>
+					
+							
+				</nav>
+				
+				<div class="box1">
+					<div class="inner">
+						<h1 id="head_one">Welcome!</h1>
+						<p id="para_one" >Home of dhinozinta fashion at affordable rate<p/>
+						<button id="start">Get Started</button>
+						<button id="register">Register</button>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="inner1">
+						<form action="get" id="signup" autocomplete="on" novalidate>
+							<h4>Please fill the form below</h4>
+							<hr>
+							<br>
+							<label for="name">Name :</label>
+								<input type="text" name="name" id="name" placeholder="enter a name" autocomplete="name" class="btn">
+								<br>
+							<label for="surname">Surname :</label>
+								<input type="text" name="surname" id="surname" placeholder="surname" autocomplete="surname" class="btn">
+								<br>
+							<label for="othername">Other Name :</label>
+								<input type="text" name="othername" id="othername" placeholder="other name" autocomplete="othername" class="btn">
+								<br>
+							<label for="email">Email : </label>
+								<input type="Email" name="email" id="email" placeholder="enter your email" autocomplete="email" class="btn">
+								<br>
+							<label for="password">Password :</label>
+								<input type="password" name="password" id="password" placeholder="enter your passsword" autocomplete="password"class="btn">
+								<br>
+							<label for="confirm_password">Confirm Password :</label>
+								<input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password" autocomplete="confirm_password" class="btn">
+								<br>
+								<br>
+								<b><p id="error" style="color:red; display:none;"></p></b>
+								<br>
+								<button type="submit" id="btn">Create Account</button><br><br>
+								<button type="button" id="delete_btn">Delete</button>
+								
+						</form>
+					</div>
+				</div>
+				
+				
+				<section>
+					<h2 style="text-align:center; padding:20px; margin:0px;">Our Platform</h2>
+					<div id="sect">
+						<div class="head">
+							<h3>Fast Delivery</h3>
+							<hr>
+						</div>
+					
+						<div class="head">
+							<h3>Quality Fabrics</h3>
+							<hr>
+						</div>
+					
+						<div class="head">
+							<h3>Custom Fitting </h3>
+							<hr>
+						</div>
+					</div>
+					
+					
+						<div class="middle_parent">
+							<div class="middle_children">
+								<h3>Wedding styles</h3>
+								<hr>
+							</div>
+							<div class="middle_children">
+								<h3>Casual Wears</h3>
+								<hr>
+							</div>
+						</div>
+						
+						<div class="middle_parent">
+							<div class="middle_children">
+								<h3>Ready-to-Wear</h3>
+								<hr>
+							</div>
+							<div class="middle_children">
+								<h3>Bespoke Tailoring</h3>
+								<hr>
+							</div>
+						</div>
+					
+				</section>
+				<div id="aftersect">
+				</div>
+			
+			
+			</div>	
+			<script src="script.js"></script>	
+		</body>
+	</html>

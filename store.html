@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+	<html lang ="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Dhinozinta</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css/">
+			<link rel="stylesheet" href="index.css"></link>
+			<style>
+			
+				.shop-list{
+					background-color:white;
+					border:1px solid none;
+					display:grid;
+					grid-template-columns:repeat(5, 1fr);
+					gap:24px;
+					padding:20px;
+					overflow-x: auto;
+					scrool-snap-type:x mandatory;
+					-webkit-overflow-scrolling:touch;
+				}
+				.product-card{
+					scroll-snap-align:start;
+					min-width:180px;
+					border:1px solid none;
+					background:wheat;
+					border-radius:10px;
+					box-shadow: 3px 2px 3px 3px lightgrey;
+					transition:transform 0.2s ease, box-shadow 0.2s ease;
+				}
+				.product-card:hover{
+					background:#fff;
+					border-radius:5px;
+					box-shadow: 0px 5px 7px 5px wheat;
+					transition:transform 0.2s ease, box-shadow 0.2s ease;
+				}
+				.product-card img{
+					
+					background:#fff;
+					width:100%;
+					height:300px;
+					object-fit:cover;
+					border-radius:6px;
+				}
+				.product-card button{
+					border:none;
+					padding:14px;
+					background:cream;
+					border-radius:10px;
+					box-shadow:3px 2px 3px grey;
+					transition:transform 0.2s ease, box-shadow 0.2s ease;
+					width:100%;
+					font-family:Comic Sans MS;
+				}
+				.product-card button:hover{
+					background:grey;
+					color:white;
+					font-size:14px;
+					cursor:pointer;
+				}
+				.product-card h3{
+					text-align:center;
+					background:#fff;
+					color:red;
+					font-family:Times New Roman serif;
+
+				}
+				.product-card .price{
+					padding:7px;
+					text-align:center;
+					background:#fff;
+					color:darkorange;
+					
+				}
+				.natives{
+					padding:10px;
+					background-color:grey;
+					color:white;
+					text-align:center;
+					font-family:Comic Sans MS;
+					font-style:Bold Italic;
+				}
+				.middle{
+					border:1px solid none;
+					min-height:250px;
+					background-color:darkgrey;
+					padding:25px;
+					box-sizing:border-box;
+					border-radius:15px;
+				}
+				.women{
+					border:1px solid none;
+					min-height:250px;
+					background-color:darkorange;
+					color:white;
+					padding:25px;
+					box-sizing:border-box;
+					border-radius:15px;
+				}
+				.kids{
+					border:1px solid none;
+					min-height:250px;
+					background-color:black;
+					color:white;
+					padding:25px;
+					box-sizing:border-box;
+					border-radius:15px;
+				}
+				.shirt{
+					border:1px solid none;
+					height:300px;
+					box-sizing:border-box;
+					background-color:green;
+					border-radius;20px;
+				}
+				.blazzer{
+					border:1px solid none;
+					height:300px;
+					box-sizing:border-box;
+					background-color:darkred;
+					border-radius;20px;
+				}
+				.suit{
+					border:1px solid none;
+					height:300px;
+					box-sizing:border-box;
+					background-color:silver;
+					border-radius;20px;
+				}
+				marquee{
+					width:80%;
+					overflow:hidden;
+					white-space:nowrap;
+					text-align:center;
+				}
+				.marquee-content{
+					padding-left:200px;
+					font-size:16px;
+					line-height:2;
+					color:red;
+					display:inline-block;
+					padding-right:50%;
+					white-space:nowrap;
+					animation:scroll-left 15s linear infinite;
+					background-color:wheat;
+				}
+				
+				@keyframes scroll-left{
+					0%{transform:translateX(-50%);}
+					80%{transform:translateX(80%);}
+				}
+				.icon-box{
+					border:1px solid red;
+					max-width:300px;
+					pading:24px;
+					text-align:center;
+					border-radius:15px;
+					background:#fff;
+					transition:all 0.3s ease;
+				}
+				.icon-box:hover{
+					transform:translateY(4px);
+					box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+				}
+			</style>
+		</head>
+		<body>
+			<div class="container">
+				<div id = "headline">
+					<h4>Custom made for you - 100 days fitting guarantee - Premium European craftsmanship</h4>
+				</div>
+				
+				<nav class="nav-bar">
+					<div class="nav-container">
+						<button class="hamburger"><i class="fa-solid fa-bars"></i> ⇛ </button>
+						<ul class="nav-left">
+							<li><a href="index.html">shop</a></li>	
+							<li><a href="">stores</a></li>	
+							<li><a href="about.html">About</a></li>	
+							<li><a href="#">Books</a></li>	
+							<li><a href="journal.html">Style Journal</a></li>	
+							<li><a href="#">wedding Suit</a></li>
+						</ul>
+						
+						<div class="nav-logo">
+							<a href="#">DHINOZINTA</a>
+						</div>
+						
+						<div class="nav-right">
+							<a href="contact.html" class="btn-appointment">Book a free appointment</a>
+							<a href="#" class="login-btn">Login</a>
+							<a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+						</div>
+						<div class="cart">
+						<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d=""M3 3h21.4 2M7 13h1014-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.184 1.707.707 1.707H17m0 0a2 2 0 100>
+					</div>	
+					</div>
+						
+				</nav>
+				
+				<div class="marquee">
+					<div class="marquee-content">
+						Welcome! to Dhinozinta Super Store
+					</div>
+				</div>
+				
+				<div class="icon-box">
+					<div class="icon">
+						<i class="fa-solid fa-mobile-screen"></i>
+					</div>
+					<h3>iphone 15</h3>
+					<p>USB-C, Dynamic Island, and 48MP camera. The newest base iphone</p>
+				</div>
+				
+				<div class="natives">
+					<h2>Coperate Wears</h2>
+				</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image one">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image two">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image three">
+					<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image four">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image five">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="middle">
+				
+				</div>
+				
+					<div class="natives">
+					<h2>Men Native</h2>
+					</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image six">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image seven">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image eight">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image nine">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image ten">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="middle women">
+					i ughkjhgkjhlkjhl;jl;jh
+				</div>
+				
+				<div class="natives">
+					<h2>Women Native</h2>
+				</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image eleven">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image twelve">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image fourteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image fifteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="middle kids">
+					i ughkjhgkjhlkjhl;jl;jh
+				</div>
+				
+					<div class="natives">
+					<h2>Kids Wears</h2>
+					</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image sixteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				
+				
+					<div class="product-card">
+						<img src="" alt="image seventeen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image eighteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+		
+					<div class="product-card">
+						<img src="" alt="image nineteen">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image twenty">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="middle shirt">
+				
+				</div>
+				
+				<div class="natives">
+					<h2>Shirts</h2>
+				</div>
+				
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image twenty-one">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image twenty-two">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image twenty-three">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image twenty-four">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image twenty-five">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+					<div class="natives">
+					<h2>Pants</h2>
+					</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image twenty-six">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image twenty-seven">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image twenty-eight">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+			
+					<div class="product-card">
+						<img src="" alt="image twenty-nine">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="middle blazzer">
+				
+				</div>
+				
+					<div class="natives">
+						<h2>Blazzer Jacket</h2>
+					</div>
+				
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image thirty-one">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image thirty-two">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty-three">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty-four">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty--five">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+				<div class="suit">
+				
+				</div>
+				
+					<div class="natives">
+					<h2>Suits</h2>
+					</div>
+				<div class="shop-list">
+					<div class="product-card">
+						<img src="" alt="image thirty-six">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<img src="" alt="image thirty-seven">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty-eight">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image thirty-nine">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+					<div class="product-card">
+						<img src="" alt="image fourty">
+						<h3>Seven star black senetor</h3>
+						<p class="price">#25,000</p>
+						<button>Add to Cart</button>
+					</div>
+				</div>
+				
+			<script src="script.js"></script>
+		</div>
+		</body>
+	</html>
